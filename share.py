@@ -112,4 +112,4 @@ for length in length_list:
             f.write(f"Section: {title}\n\n{content}")
         print(f"Saved: {output_file}")
 
-print(f"Now all you need to do is upload the split files to the LLM model, and the training will be complete!~)
+print(f"Now all you need to do is upload the split files to the LLM model, and the training will be complete!~")
