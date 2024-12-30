@@ -87,9 +87,8 @@ def extract_and_split_text_from_pdf(file_path, max_length=10000):
 
 
 length_list = [6000]
-vol = 2
-ch = 35
-file_path = f"V{vol}C{ch}.pdf"
+
+file_path = input('please give me the filename:   ')
 
 for length in length_list:
     # 提取和分段處理
@@ -112,3 +111,5 @@ for length in length_list:
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(f"Section: {title}\n\n{content}")
         print(f"Saved: {output_file}")
+
+print(f"Now all you need to do is upload the split files to the LLM model, and the training will be complete!~)
