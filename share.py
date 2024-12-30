@@ -1,6 +1,7 @@
 import pdfplumber
 import re
 from nltk.tokenize import sent_tokenize
+import os
 
 
 def extract_and_split_text_from_pdf(file_path, max_length=10000):
@@ -91,10 +92,16 @@ length = int(input('please give me the length of tokens(suggest 10000):   '))
 # 提取和分段處理
 split_sections = extract_and_split_text_from_pdf(file_path, max_length=length)
 
+for idx, (title, content) in enumerate(split_sections):
+    # 構建目標資料夾和檔案路徑
+    folder_path = f"./{length}/{file_path}/"
+    # 檢查資料夾是否存在，如果不存在則建立
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
 
 # 將分段保存為檔案
 for idx, (title, content) in enumerate(split_sections):
-    output_file = f"./{length}/{file_path}_part{idx + 1}.txt"
+    output_file = f"./{length}/{file_path}/{file_path}_part{idx + 1}.txt"
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"Section: {title}\n\n{content}")
     print(f"Saved: {output_file}")
