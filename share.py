@@ -3,7 +3,7 @@ import re
 import tiktoken
 
 
-def count_tokens(text, model="gpt-4o"):
+def count_tokens(text, model="gpt-4.1"):
     """
     使用 OpenAI 的 tiktoken 套件計算 token 數量。
 
