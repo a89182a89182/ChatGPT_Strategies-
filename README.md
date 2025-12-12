@@ -5,6 +5,8 @@ Brief presentation: https://youtu.be/oxJTi04FBWA
 
 How to use the software: [https://youtu.be/2FYkePd2n1M](https://youtu.be/Jn5T7d6swJg)
 
+Paper published: https://doi.org/10.1080/10872981.2025.2602788
+
 ## Instructions
 
 ### 1. Download the Required File
